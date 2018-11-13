@@ -1,23 +1,31 @@
 {
-  "name": "electron-webpack-quick-start",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "next0.1",
+  "version": "0.1.0",
+  "author": "lidya & abenezer",
+  "description": "Next Planner and Workspace Communication 2018",
+  "private": true,
+  "main": "electron.js",
+  "homepage": "./",
   "scripts": {
-    "dev": "electron-webpack dev",
-    "compile": "electron-webpack",
-    "dist": "yarn compile && electron-builder",
-    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
-  },
-  "dependencies": {
-    "source-map-support": "^0.5.9"
+    "elec": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "devDependencies": {
-    "electron": "3.0.7",
-    "electron-builder": "^20.29.0",
-    "electron-webpack": "^2.3.1",
-    "webpack": "^4.23.1"
+    "electron-builder": "^20.31.2"
   },
-  "resolutions": {
-    "upath": "^1.0.5"
+  "build": {
+    "appId": "next.et",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+	 "publish": [{
+             "provider": "github",
+             "owner": "abenezer",
+             "repo": "electron-updater-example"
+         }],
+  },
+  "dependencies": {
+    "electron-updater": "^3.2.3"
   }
 }
